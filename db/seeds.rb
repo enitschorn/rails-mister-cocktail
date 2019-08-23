@@ -1,5 +1,6 @@
 require 'open-uri'
 require 'json'
+require 'faker'
 
 if Rails.env.development?
   puts 'Cleaning up database'
@@ -17,4 +18,12 @@ ingredients['drinks'].each do |ingredient|
   Ingredient.create!(name: (ingredient['strIngredient1']))
 end
 
-puts "Completed #{Ingredient.count}"
+puts 'Creating cocktails'
+
+9.times do
+  Cocktail.create!(name: Faker::Games::Witcher.monster)
+end
+
+puts "Completed #{Cocktail.count} cocktails and #{Ingredient.count} ingredients"
+
+
