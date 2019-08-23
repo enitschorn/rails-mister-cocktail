@@ -24,15 +24,16 @@
           </tbody>
         </table>
         <% else %>
-        <h3>Ingredients</h3>
+        <h6>Ingredients</h6>
         This cocktail has no ingredients yet. 🙁
         <% end %>
         <div>
-          <h3>Ratings</h3>
           <% if @cocktail.reviews.present? %>
+          <% ratings = [] %>
             <% @cocktail.reviews.each do |review| %>
-            <%= review.rating %>,
+            <% ratings << review.rating.to_i %>
             <% end %>
+            Rating - <%= ratings.sum / ratings.length %> ⭐️
           <% else %>
             This cocktail has no ratings yet. 🙁
           <% end %>
