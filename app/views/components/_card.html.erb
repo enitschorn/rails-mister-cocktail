@@ -24,11 +24,23 @@
           </tbody>
         </table>
         <% else %>
+        <h3>Ingredients</h3>
         This cocktail has no ingredients yet. 🙁
         <% end %>
+        <div>
+          <h3>Ratings</h3>
+          <% if @cocktail.reviews.present? %>
+            <% @cocktail.reviews.each do |review| %>
+            <%= review.rating %>,
+            <% end %>
+          <% else %>
+            This cocktail has no ratings yet. 🙁
+          <% end %>
+        </div>
       </div>
       <div class="card-body">
       <%= link_to 'Add new ingredient', new_cocktail_dose_path(@cocktail), class: "btn-flat" %>
+      <%= link_to 'Add new review', new_cocktail_review_path(@cocktail), class: "btn-flat" %>
       </div>
     </div>
   </div>
