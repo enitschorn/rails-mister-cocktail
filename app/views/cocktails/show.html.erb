@@ -49,17 +49,15 @@
     </div>
     <div class="reviews">
       <% if @cocktail.reviews.present? %>
-      <table class="table table-borderless">
-        <tbody>
-          <% @cocktail.doses.each do |dose| %>
-            <tr>
-              <th scope="row"><%= dose.description %></th>
-              <td><%= dose.ingredient.name %></td>
-              <td><%= link_to 'Remove', dose_path(dose), method: :delete, 'data-confirm': 'Are you sure?' %></td>
-            </tr>
-          <% end %>
-        </tbody>
-      </table>
+        <table class="table table-borderless">
+          <tbody>
+            <% @cocktail.reviews.each do |review| %>
+              <tr>
+                <th scope="row"><%= review.description %></th>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
       <% else %>
         <table class="table table-borderless">
           <tbody>
