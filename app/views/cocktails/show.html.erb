@@ -1,5 +1,79 @@
-<div style="border-bottom: 1px solid black">
-  <%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
+<div class="entry-header">
+  <div class="entry-subtitle">
+    <p>#We <i class="fas fa-heart"></i> cocktails</p>
+    <h2><%= @cocktail.name %></h2>
+  </div>
 </div>
-<%= render 'components/card' %>
+<div class="image-box my-3 mx-3">
+  <div><%= cl_image_tag @cocktail.photo, height: 500, width: 700, crop: :fill %></div>
+</div>
+<div class="description">
+  <div style="border-top: 2px solid black" class="cocktail-container my-5 mx-4">
+    <div class="description-header">
+      <h3><%= @cocktail.name %></h3>
+      <div>
+      <% if @cocktail.reviews.present? %>
+      <% ratings = [] %>
+        <% @cocktail.reviews.each do |review| %>
+        <% ratings << review.rating.to_i %>
+        <% end %>
+        Rating <%= ratings.sum / ratings.length %>
+      <% else %>
+      <%= '' %>
+      <% end %>
+      </div>
+    </div>
+    <div class="ingredients">
+      <% if @cocktail.doses.present? %>
+        <table class="table table-borderless">
+          <tbody>
+            <% @cocktail.doses.each do |dose| %>
+              <tr>
+                <th scope="row"><%= dose.description %></th>
+                <td><%= dose.ingredient.name %></td>
+                <td><%= link_to 'Remove', dose_path(dose), method: :delete, 'data-confirm': 'Are you sure?' %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      <% else %>
+        <table class="table table-borderless">
+          <tbody>
+            <tr>
+              <th scope="row">This cocktail has no ingredients yet.</th>
+            </tr>
+          </tbody>
+        </table>
+      <% end %>
+      <%= link_to 'Add new ingredient', new_cocktail_dose_path(@cocktail), class: "btn-flat" %>
+    </div>
+    <div class="reviews">
+      <% if @cocktail.reviews.present? %>
+      <table class="table table-borderless">
+        <tbody>
+          <% @cocktail.doses.each do |dose| %>
+            <tr>
+              <th scope="row"><%= dose.description %></th>
+              <td><%= dose.ingredient.name %></td>
+              <td><%= link_to 'Remove', dose_path(dose), method: :delete, 'data-confirm': 'Are you sure?' %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+      <% else %>
+        <table class="table table-borderless">
+          <tbody>
+            <tr>
+              <th scope="row">This cocktail has no reviews yet.</th>
+            </tr>
+          </tbody>
+        </table>
+      <% end %>
+      <%= link_to 'Add new review', new_cocktail_review_path(@cocktail), class: "btn-flat" %>
+    </div>
+  </div>
+</div>
+
+
+
 
