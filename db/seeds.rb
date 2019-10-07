@@ -1,8 +1,5 @@
 require 'open-uri'
 require 'json'
-require 'faker'
-
-images = ['https://images.unsplash.com/photo-1424591093900-514bab956faf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60', 'https://images.unsplash.com/photo-1542600176-9d2c4bb4bc1a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60', 'https://images.unsplash.com/photo-1560508180-03f285f67ded?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60', 'https://images.unsplash.com/photo-1485265449635-ca623a55e95c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60', 'https://images.unsplash.com/photo-1461823385004-d7660947a7c0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60']
 
 if Rails.env.development?
   puts 'Cleaning up database'
@@ -22,14 +19,67 @@ end
 
 puts 'Creating cocktails'
 
-cocktail_names = []
-9.times { cocktail_names << Faker::Games::Witcher.monster }
-cocktail_names.uniq.each do |name|
-  @cocktail = Cocktail.new(name: name)
-  @cocktail.remote_photo_url = images.sample
-  @cocktail.save!
-end
+@opinicus = Cocktail.new(
+  remote_photo_url: 'https://images.unsplash.com/photo-1566823422707-7813dab8eca9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
+  name: 'Opinicus'
+  )
+
+@opinicus.save!
+
+@harpy = Cocktail.new(
+  remote_photo_url: 'https://images.unsplash.com/photo-1527661591475-527312dd65f5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=358&q=80',
+  name: 'Harpy'
+)
+
+@harpy.save!
+
+@silver_basilisk = Cocktail.new(
+  remote_photo_url: 'https://images.unsplash.com/photo-1486428263684-28ec9e4f2584?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80',
+  name: 'Silver Basilisk'
+)
+
+@silver_basilisk.save!
+
+@ghoul = Cocktail.new(
+  remote_photo_url: 'https://images.unsplash.com/photo-1550426735-c33c7ce414ff?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=320&q=80',
+  name: 'Ghoul'
+)
+
+@ghoul.save!
+
+@ulfheddin = Cocktail.new(
+  remote_photo_url: 'https://images.unsplash.com/photo-1536599424071-0b215a388ba7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80',
+  name: 'Ulfheddin'
+)
+
+@ulfheddin.save!
+
+@barghest = Cocktail.new(
+  remote_photo_url: 'https://images.unsplash.com/photo-1506802913710-40e2e66339c9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80',
+  name: 'Barghest'
+)
+
+@barghest.save!
+
+@mourntart = Cocktail.new(
+  remote_photo_url: 'https://images.unsplash.com/photo-1517644493876-7864565e3bf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80',
+  name: 'Mourntart'
+)
+
+@mourntart.save!
+
+@chort = Cocktail.new(
+  remote_photo_url: 'https://images.unsplash.com/photo-1504310578167-435ac09e69f3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2134&q=80',
+  name: 'Chort'
+)
+
+@chort.save!
+
+@amanis = Cocktail.new(
+  remote_photo_url: 'https://images.unsplash.com/photo-1512829352065-c0023cb86592?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
+  name: 'Amanis'
+)
+
+@amanis.save!
 
 puts "Completed #{Cocktail.count} cocktails and #{Ingredient.count} ingredients"
-
-
