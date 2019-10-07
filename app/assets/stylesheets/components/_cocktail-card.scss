@@ -1,0 +1,27 @@
+.cocktail-card {
+  margin: 40px;
+
+  .cocktail-image {
+    margin-bottom: 16px;
+  }
+
+  .cocktail-name {
+    color: black;
+    text-decoration: none;
+  }
+}
+
+.cocktail-card:hover {
+  text-decoration: none;
+
+  .cocktail-image {
+    opacity: 0.7;
+  }
+
+  .cocktail-name {
+    display: inline-block;
+    color: black;
+    border-bottom: 1px solid #EF9488;
+    text-decoration: none;
+  }
+}

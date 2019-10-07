@@ -69,14 +69,14 @@ puts 'Creating cocktails'
 @mourntart.save!
 
 @chort = Cocktail.new(
-  remote_photo_url: 'https://images.unsplash.com/photo-1504310578167-435ac09e69f3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2134&q=80',
+  remote_photo_url: 'https://images.unsplash.com/photo-1552286101-1d6d585650be?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
   name: 'Chort'
 )
 
 @chort.save!
 
 @amanis = Cocktail.new(
-  remote_photo_url: 'https://images.unsplash.com/photo-1512829352065-c0023cb86592?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
+  remote_photo_url: 'https://images.unsplash.com/photo-1566284628402-3f0895b3eb28?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
   name: 'Amanis'
 )
 
