@@ -1,22 +1,16 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <%= link_to root_path, class: "navbar-brand" do %>
-    Miss Cocktail
-  <% end %>
-
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" style="border-radius: 4px;" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn-non-flat my-2 my-sm-0" type="submit">Search</button>
-    </form>
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <%= link_to "Add a cocktail", new_cocktail_path, class: "nav-link btn-non-flat" %>
-      </li>
-    </ul>
-  </div>
-</div>
+<ul class="nav flex-sm-column">
+  <li class="nav-item">
+    <%= link_to root_path do %>
+      <%= cl_image_tag("https://cdn.dribbble.com/users/1828677/screenshots/6153056/cocktail2.gif", class:"logo") %>
+    <% end %>
+  </li>
+  <li class="nav-item">
+    <%= link_to "Browse", cocktails_path, class:"nav-link", id:"vertical-link" %>
+  </li>
+  <li class="nav-item">
+    <%= link_to "Add Cocktail", new_cocktail_path, class:"nav-link", id:"vertical-link" %>
+  </li>
+  <li class="nav-item github-logo">
+    <a href="https://github.com/enitschorn/rails-mister-cocktail" alt="github-logo"><i class="fab fa-github"></i></a>
+  </li>
+</ul>

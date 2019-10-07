@@ -1,14 +1,27 @@
-.navbar-lewagon {
-  justify-content: space-between;
-  background: white;
-  border-bottom: 2px solid rgba(200,200,200,0.5);
-  padding-top: 20px;
+.logo {
+  width: 150px;
+  margin-bottom: 80px;
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+#vertical-link {
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  margin: 16px 48px;
+  text-decoration: none;
+  color: black;
+  letter-spacing: 0.1rem;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+#vertical-link:hover {
+  text-decoration: line-through;
+}
+
+.github-logo {
+  margin: 80px 48px 0 48px;
+}
+
+.fa-github {
+  color: black;
+  font-size: 24px;
+  padding: 16px;
 }

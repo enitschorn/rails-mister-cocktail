@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  root to: 'cocktails#index'
-  resources :cocktails, only: [:show, :new, :create] do
+  root to: 'pages#home'
+  resources :cocktails, only: [:index, :show, :new, :create] do
     resources :doses, only: [:new, :create]
     resources :reviews, only: [:new, :create]
   end

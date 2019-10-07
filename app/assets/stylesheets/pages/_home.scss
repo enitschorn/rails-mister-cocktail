@@ -1,1 +1,13 @@
 // Specific CSS for your home-page
+#container-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 11fr;
+    min-height: 100%;
+}
+
+#container-main {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
