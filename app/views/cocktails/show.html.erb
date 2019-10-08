@@ -3,16 +3,16 @@
     <div class="cocktail-description-name">
       <h1><%= @cocktail.name.upcase %></h1>
     </div>
-    <div class="cocktail-description-rating">
-      <%= render 'partials/rating', cocktail: @cocktail %>
-    </div>
     <div class="cocktail-description-ingredients">
+      <div class="description-header">Ingredients</div>
       <%= render 'partials/ingredients', cocktail: @cocktail %>
       <div class="create-btn">
         <%= link_to 'NEW INGREDIENT', new_cocktail_dose_path(@cocktail), class: "btn" %>
       </div>
     </div>
     <div class="cocktail-description-reviews">
+      <div class="description-header">Reviews</div>
+      <%= render 'partials/rating', cocktail: @cocktail %>
       <%= render 'partials/reviews', cocktail: @cocktail %>
       <div class="create-btn">
         <%= link_to 'NEW REVIEW', new_cocktail_review_path(@cocktail), class: "btn" %>

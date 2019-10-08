@@ -22,63 +22,63 @@ puts 'Creating cocktails'
 
 @opinicus = Cocktail.new(
   remote_photo_url: 'https://images.unsplash.com/photo-1566823422707-7813dab8eca9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
-  name: 'Opinicus'
+  name: 'Upsidedown Summer Opinicus'
   )
 
 @opinicus.save!
 
 @harpy = Cocktail.new(
   remote_photo_url: 'https://images.unsplash.com/photo-1527661591475-527312dd65f5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=358&q=80',
-  name: 'Harpy'
+  name: 'Classic Cuban Harpy'
 )
 
 @harpy.save!
 
 @basilisk = Cocktail.new(
   remote_photo_url: 'https://images.unsplash.com/photo-1486428263684-28ec9e4f2584?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80',
-  name: 'Basilisk'
+  name: 'Minty Ice Basilisk'
 )
 
 @basilisk.save!
 
 @ghoul = Cocktail.new(
   remote_photo_url: 'https://images.unsplash.com/photo-1550426735-c33c7ce414ff?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=320&q=80',
-  name: 'Ghoul'
+  name: 'Long Poetic Ghoul'
 )
 
 @ghoul.save!
 
 @ulfheddin = Cocktail.new(
   remote_photo_url: 'https://images.unsplash.com/photo-1536599424071-0b215a388ba7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80',
-  name: 'Ulfheddin'
+  name: 'Bahama Mama Ulfheddin'
 )
 
 @ulfheddin.save!
 
 @barghest = Cocktail.new(
   remote_photo_url: 'https://images.unsplash.com/photo-1506802913710-40e2e66339c9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80',
-  name: 'Barghest'
+  name: 'Dark and Stormy Barghest'
 )
 
 @barghest.save!
 
 @mourntart = Cocktail.new(
   remote_photo_url: 'https://images.unsplash.com/photo-1517644493876-7864565e3bf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80',
-  name: 'Mourntart'
+  name: 'Chunky Sunset Mourntart'
 )
 
 @mourntart.save!
 
 @chort = Cocktail.new(
   remote_photo_url: 'https://images.unsplash.com/photo-1552286101-1d6d585650be?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
-  name: 'Chort'
+  name: 'Powerful Tropical Chort'
 )
 
 @chort.save!
 
 @amanis = Cocktail.new(
   remote_photo_url: 'https://images.unsplash.com/photo-1566284628402-3f0895b3eb28?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
-  name: 'Amanis'
+  name: 'Refreshing Chilled Amanis'
 )
 
 @amanis.save!

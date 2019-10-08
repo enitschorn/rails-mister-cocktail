@@ -1,9 +1,6 @@
 <% if cocktail.reviews.present? %>
   <table class="table table-borderless">
     <tbody>
-      <tr>
-        <th scope="row" class="description-header">Reviews</th>
-      </tr>
       <% cocktail.reviews.each do |review| %>
         <tr>
           <td scope="row"><%= review.description %></td>
@@ -14,9 +11,6 @@
 <% else %>
   <table class="table table-borderless">
     <tbody>
-      <tr>
-        <th scope="row" class="description-header">Reviews</th>
-      </tr>
       <tr>
         <td scope="row">This cocktail has no reviews yet.</td>
       </tr>

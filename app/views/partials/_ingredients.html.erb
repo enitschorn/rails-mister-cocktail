@@ -1,14 +1,11 @@
 <% if cocktail.doses.present? %>
   <table class="table table-borderless">
     <tbody>
-      <tr>
-        <th scope="row" class="description-header">Ingredients</th>
-      </tr>
       <% cocktail.doses.each do |dose| %>
         <tr>
           <td scope="row"><%= dose.description %></td>
           <td><%= dose.ingredient.name %></td>
-          <td><%= link_to 'Remove', dose_path(dose), method: :delete, 'data-confirm': 'Are you sure?' %></td>
+          <%#= link_to 'Remove', dose_path(dose), method: :delete, 'data-confirm': 'Are you sure?' %>
         </tr>
       <% end %>
     </tbody>
@@ -16,9 +13,6 @@
 <% else %>
   <table class="table table-borderless">
     <tbody>
-      <tr>
-        <th scope="row" class="description-header">Ingredients</th>
-      </tr>
       <tr>
         <td scope="row">This cocktail has no ingredients yet.</td>
       </tr>
