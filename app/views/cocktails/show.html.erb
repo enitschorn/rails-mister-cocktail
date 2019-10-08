@@ -4,14 +4,14 @@
       <h1><%= @cocktail.name.upcase %></h1>
     </div>
     <div class="cocktail-description-ingredients">
-      <div class="description-header">Ingredients</div>
+      <div class="description-header-ingredients">Ingredients</div>
       <%= render 'partials/ingredients', cocktail: @cocktail %>
       <div class="create-btn">
         <%= link_to 'NEW INGREDIENT', new_cocktail_dose_path(@cocktail), class: "btn" %>
       </div>
     </div>
     <div class="cocktail-description-reviews">
-      <div class="description-header">Reviews</div>
+      <div class="description-header-reviews">Reviews</div>
       <%= render 'partials/rating', cocktail: @cocktail %>
       <%= render 'partials/reviews', cocktail: @cocktail %>
       <div class="create-btn">

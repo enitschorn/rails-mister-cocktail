@@ -11,19 +11,17 @@
 .cocktail-description-name {
   h1 {
     font-size: 120px;
-    display: inline-block;
-    border-bottom: 1px solid #EF9488;
   }
 }
 
 .cocktail-description-ingredients {
-  margin: 24px 0 80px 0;
+  margin: 120px 0 80px 0;
 
   td {
     font-size: 16px;
     font-weight: lighter;
     letter-spacing: 0.1rem;
-    padding: 16px 0;
+    padding: 8px 0;
     margin-top: 8px;
   }
 }
@@ -55,7 +53,15 @@
   max-width: 100%;
 }
 
-.description-header {
+.description-header-ingredients {
+  font-size: 24px;
+  font-weight: lighter;
+  letter-spacing: 0.1rem;
+  padding: 0;
+  margin-bottom: 16px;
+}
+
+.description-header-reviews {
   font-size: 24px;
   font-weight: lighter;
   letter-spacing: 0.1rem;
