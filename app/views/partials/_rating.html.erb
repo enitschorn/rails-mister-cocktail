@@ -1,0 +1,9 @@
+<% if cocktail.reviews.present? %>
+  <% ratings = [] %>
+  <% cocktail.reviews.each do |review| %>
+  <% ratings << review.rating.to_i %>
+  <% end %>
+  Rating <%= ratings.sum / ratings.length %>
+<% else %>
+  <%= '' %>
+<% end %>

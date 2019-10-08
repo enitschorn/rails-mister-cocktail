@@ -1,78 +1,70 @@
-
-.image-box {
+.show-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 40px;
 }
 
-.entry-header {
-  text-align: center;
-  position: relative;
-  margin-top: 80px;
+.cocktail-description {
+  margin: 0 40px 0 0;
 }
 
-.entry-subtitle h2 {
-  font-size: 1.6rem;
-  font-weight: 900;
-  font-style: italic;
-  letter-spacing: .5rem;
-  margin: 0 0 .84rem;
+.cocktail-description-name {
+  h1 {
+    font-size: 120px;
+    display: inline-block;
+    border-bottom: 1px solid #EF9488;
+  }
 }
 
-.entry-subtitle p {
-  font-size: 1rem;
-  font-weight: 600;
-  letter-spacing: .5rem;
-  margin: 0 0 .84rem;
+.cocktail-description-ingredients {
+  margin: 24px 0;
+
+  th {
+    font-size: 24px;
+    font-weight: lighter;
+    letter-spacing: 0.1rem;
+    padding: 0;
+  }
+
+  td {
+    font-size: 16px;
+    font-weight: lighter;
+    letter-spacing: 0.1rem;
+    padding: 16px 0;
+    margin-top: 8px;
+  }
 }
 
-.entry-header::after {
-  display: block;
-  margin: 2rem auto 3rem;
-  width: 10rem;
-  height: .2rem;
-  border-top: .2rem solid #444;
-  content: '';
+.cocktail-description-reviews {
+  margin: 24px 0;
+
+  th {
+    font-size: 24px;
+    font-weight: lighter;
+    letter-spacing: 0.1rem;
+    padding: 0;
+  }
+
+  td {
+    font-size: 16px;
+    font-weight: lighter;
+    letter-spacing: 0.1rem;
+    padding: 16px 0;
+    margin-top: 8px;
+  }
 }
 
-
-.description-header {
-  text-transform: uppercase;
-  letter-spacing: .3rem;
-  margin: 2.5rem 0 1.4rem;
+.create-btn {
+  float: right;
+  margin-bottom: 24px;
 }
 
-
-.ingredients {
-  background-color: #fff;
-  box-shadow: 0 0.5rem 1rem -0.5rem rgba(0,0,0,.5);
-  position: relative;
-  margin: 0 0 3.64rem 0;
-  padding: 1rem;
-  line-height: 1.6;
-  float: left;
-  width: 50%;
-}
-
-.reviews {
-  position: relative;
-  margin: 0 0 3.64rem 2rem;
-  padding: 1rem;
-  line-height: 1.6;
-  float: left;
+.cocktail-description-image {
+  margin: 24px 0 0 40px;
 }
 
 .table {
   list-style: none;
-  padding: 1rem 1rem 1rem 3rem;
-  margin: 0 0 3.64rem 0;
-  max-width: none;
-}
-
-.description {
-  display: flex;
-  justify-content: center;
-}
-
-.cocktail-container {
-  width: 700px;
+  margin: 0 0 8px 0;
+  max-width: 100%;
 }

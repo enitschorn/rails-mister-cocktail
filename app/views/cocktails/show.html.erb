@@ -1,77 +1,25 @@
-<div class="entry-header">
-  <div class="entry-subtitle">
-    <p>#We <i class="fas fa-heart"></i> cocktails</p>
-    <h2><%= @cocktail.name %></h2>
-  </div>
-</div>
-<div class="image-box my-3 mx-3">
-  <div><%= cl_image_tag @cocktail.photo, height: 500, width: 700, crop: :fill %></div>
-</div>
-<div class="description">
-  <div style="border-top: 2px solid black" class="cocktail-container my-5 mx-4">
-    <div class="description-header">
-      <h3><%= @cocktail.name %></h3>
-      <div>
-      <% if @cocktail.reviews.present? %>
-      <% ratings = [] %>
-        <% @cocktail.reviews.each do |review| %>
-        <% ratings << review.rating.to_i %>
-        <% end %>
-        Rating <%= ratings.sum / ratings.length %>
-      <% else %>
-      <%= '' %>
-      <% end %>
+<div class="container my-5 show-container">
+  <div class="cocktail-description">
+    <div class="cocktail-description-name">
+      <h1><%= @cocktail.name.upcase %></h1>
+    </div>
+    <div class="cocktail-description-rating">
+      <%= render 'partials/rating', cocktail: @cocktail %>
+    </div>
+    <div class="cocktail-description-ingredients">
+      <%= render 'partials/ingredients', cocktail: @cocktail %>
+      <div class="create-btn">
+        <%= link_to 'NEW INGREDIENT', new_cocktail_dose_path(@cocktail), class: "btn" %>
       </div>
     </div>
-    <div class="ingredients">
-      <% if @cocktail.doses.present? %>
-        <table class="table table-borderless">
-          <tbody>
-            <% @cocktail.doses.each do |dose| %>
-              <tr>
-                <th scope="row"><%= dose.description %></th>
-                <td><%= dose.ingredient.name %></td>
-                <td><%= link_to 'Remove', dose_path(dose), method: :delete, 'data-confirm': 'Are you sure?' %></td>
-              </tr>
-            <% end %>
-          </tbody>
-        </table>
-      <% else %>
-        <table class="table table-borderless">
-          <tbody>
-            <tr>
-              <th scope="row">This cocktail has no ingredients yet.</th>
-            </tr>
-          </tbody>
-        </table>
-      <% end %>
-      <%= link_to 'Add new ingredient', new_cocktail_dose_path(@cocktail), class: "btn-flat" %>
-    </div>
-    <div class="reviews">
-      <% if @cocktail.reviews.present? %>
-        <table class="table table-borderless">
-          <tbody>
-            <% @cocktail.reviews.each do |review| %>
-              <tr>
-                <th scope="row"><%= review.description %></th>
-              </tr>
-            <% end %>
-          </tbody>
-        </table>
-      <% else %>
-        <table class="table table-borderless">
-          <tbody>
-            <tr>
-              <th scope="row">This cocktail has no reviews yet.</th>
-            </tr>
-          </tbody>
-        </table>
-      <% end %>
-      <%= link_to 'Add new review', new_cocktail_review_path(@cocktail), class: "btn-flat" %>
+    <div class="cocktail-description-reviews">
+      <%= render 'partials/reviews', cocktail: @cocktail %>
+      <div class="create-btn">
+        <%= link_to 'NEW REVIEW', new_cocktail_review_path(@cocktail), class: "btn" %>
+      </div>
     </div>
   </div>
+  <div class="cocktail-description-image">
+    <%= cl_image_tag @cocktail.photo, height: 700, width: 550, crop: :fill %>
+  </div>
 </div>
-
-
-
-
