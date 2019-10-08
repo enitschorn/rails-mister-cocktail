@@ -1,15 +1,10 @@
-<div class="container col-6-offset-3 my-5" style="width: 700px" >
-
-  <h1> New review for <%=  @cocktail.name %> </h1>
-
-  <div>
+<div class="container my-5" style="padding: 40px" >
+  <div class="form">
+    <h1> New review for<br> <%=  @cocktail.name %> </h1>
     <%= simple_form_for [@cocktail, @review] do |f| %>
     <%= f.input :description %>
     <%= f.input :rating, collection: (0..5) %>
-    <%= f.submit "Add Review", class: "btn-flat" %>
+    <%= f.submit "ADD REVIEW", class: "add-btn create-btn" %>
     <% end %>
-    <div>
-      <%= link_to 'Cancel', cocktails_path %>
-    </div>
   </div>
 </div>

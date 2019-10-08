@@ -1,7 +1,7 @@
 <%= simple_form_for cocktail do |f| %>
-  <%= f.input :name %>
+  <%= f.input :name, label: 'Name' %>
   <%= f.input :photo %>
   <%= f.input :photo_cache, as: :hidden %>
-  <%= f.submit "Add Cocktail", class: "btn-flat" %>
+  <%= f.submit "ADD COCKTAIL", class: "add-btn create-btn" %>
 <% end %>
 

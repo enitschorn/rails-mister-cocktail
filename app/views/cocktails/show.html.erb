@@ -7,7 +7,7 @@
       <div class="description-header-ingredients">Ingredients</div>
       <%= render 'partials/ingredients', cocktail: @cocktail %>
       <div class="create-btn">
-        <%= link_to 'NEW INGREDIENT', new_cocktail_dose_path(@cocktail), class: "btn" %>
+        <%= link_to 'NEW INGREDIENT', new_cocktail_dose_path(@cocktail), class: "add-btn" %>
       </div>
     </div>
     <div class="cocktail-description-reviews">
@@ -15,7 +15,7 @@
       <%= render 'partials/rating', cocktail: @cocktail %>
       <%= render 'partials/reviews', cocktail: @cocktail %>
       <div class="create-btn">
-        <%= link_to 'NEW REVIEW', new_cocktail_review_path(@cocktail), class: "btn" %>
+        <%= link_to 'NEW REVIEW', new_cocktail_review_path(@cocktail), class: "add-btn" %>
       </div>
     </div>
   </div>
