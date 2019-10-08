@@ -1,12 +1,12 @@
 <% if cocktail.reviews.present? %>
   <table class="table table-borderless">
     <tbody>
+      <tr>
+        <th scope="row" class="description-header">Reviews</th>
+      </tr>
       <% cocktail.reviews.each do |review| %>
         <tr>
-          <th scope="row" class="description-header">Reviews</th>
-        </tr>
-        <tr>
-          <th scope="row"><%= review.description %></th>
+          <td scope="row"><%= review.description %></td>
         </tr>
       <% end %>
     </tbody>
