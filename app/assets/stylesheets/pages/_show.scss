@@ -62,3 +62,53 @@
   letter-spacing: 0.1rem;
   padding: 0;
 }
+
+@media(max-width: 768px) {
+  .show-container {
+    padding: 0;
+    flex-wrap: wrap;
+  }
+
+  .cocktail-description-name {
+    h1 {
+      font-size: 40px;
+    }
+  }
+
+  .cocktail-description-image {
+    margin: 0;
+
+    .img {
+      width: 400px;
+    }
+  }
+
+  .cocktail-description-ingredients {
+    margin: 60px 0 40px 0;
+  }
+}
+
+@media(max-width: 375px) {
+  .show-container {
+    padding: 0;
+    flex-wrap: wrap;
+  }
+
+  .cocktail-description-name {
+    h1 {
+      font-size: 40px;
+    }
+  }
+
+  .cocktail-description-ingredients {
+    margin: 60px 0 40px 0;
+  }
+
+  .cocktail-description-image {
+    margin: 0;
+
+    .img {
+      width: 260px;
+    }
+  }
+}

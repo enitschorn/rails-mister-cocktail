@@ -7,3 +7,8 @@
   font-family: "Poiret One", cursive;
 }
 
+@media(max-width: 375px) {
+  .form {
+    margin-right: 0;
+  }
+}

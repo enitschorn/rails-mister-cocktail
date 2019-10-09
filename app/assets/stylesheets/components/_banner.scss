@@ -2,7 +2,7 @@
   background-size: cover;
   background-position: center;
   height: 100vh;
-  padding: 80px;
+  padding: 80px 40px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
 
@@ -15,3 +15,18 @@
   }
 }
 
+@media(max-width: 768px) {
+  .banner {
+    h1 {
+      font-size: 64px;
+    }
+  }
+}
+
+@media(max-width: 375px) {
+  .banner {
+    h1 {
+      font-size: 40px;
+    }
+  }
+}

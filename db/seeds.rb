@@ -21,63 +21,63 @@ end
 puts 'Creating cocktails'
 
 @opinicus = Cocktail.new(
-  remote_photo_url: 'https://images.unsplash.com/photo-1566823422707-7813dab8eca9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
+  remote_photo_url: 'https://res.cloudinary.com/du7l2fe4u/image/upload/v1570582484/opinicus_nujbtb.jpg',
   name: 'Upsidedown Summer Opinicus'
   )
 
 @opinicus.save!
 
 @harpy = Cocktail.new(
-  remote_photo_url: 'https://images.unsplash.com/photo-1527661591475-527312dd65f5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=358&q=80',
+  remote_photo_url: 'https://res.cloudinary.com/du7l2fe4u/image/upload/v1570582484/harpy_vy0unc.jpg',
   name: 'Classic Cuban Harpy'
 )
 
 @harpy.save!
 
 @basilisk = Cocktail.new(
-  remote_photo_url: 'https://images.unsplash.com/photo-1486428263684-28ec9e4f2584?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80',
+  remote_photo_url: 'https://res.cloudinary.com/du7l2fe4u/image/upload/v1570582484/basilisk_vlx8tn.jpg',
   name: 'Minty Ice Basilisk'
 )
 
 @basilisk.save!
 
 @ghoul = Cocktail.new(
-  remote_photo_url: 'https://images.unsplash.com/photo-1550426735-c33c7ce414ff?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=320&q=80',
+  remote_photo_url: 'https://res.cloudinary.com/du7l2fe4u/image/upload/v1570582485/ghoul_xy6nsr.jpg',
   name: 'Long Poetic Ghoul'
 )
 
 @ghoul.save!
 
 @ulfheddin = Cocktail.new(
-  remote_photo_url: 'https://images.unsplash.com/photo-1536599424071-0b215a388ba7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80',
+  remote_photo_url: 'https://res.cloudinary.com/du7l2fe4u/image/upload/v1570582484/ulfheddin_rw0xbp.jpg',
   name: 'Bahama Mama Ulfheddin'
 )
 
 @ulfheddin.save!
 
 @barghest = Cocktail.new(
-  remote_photo_url: 'https://images.unsplash.com/photo-1506802913710-40e2e66339c9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80',
+  remote_photo_url: 'https://res.cloudinary.com/du7l2fe4u/image/upload/v1570582484/barghest_rxquuu.jpg',
   name: 'Dark and Stormy Barghest'
 )
 
 @barghest.save!
 
 @mourntart = Cocktail.new(
-  remote_photo_url: 'https://images.unsplash.com/photo-1517644493876-7864565e3bf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80',
+  remote_photo_url: 'https://res.cloudinary.com/du7l2fe4u/image/upload/v1570582484/mourntart_ms8lfe.jpg',
   name: 'Chunky Sunset Mourntart'
 )
 
 @mourntart.save!
 
 @chort = Cocktail.new(
-  remote_photo_url: 'https://images.unsplash.com/photo-1552286101-1d6d585650be?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
+  remote_photo_url: 'https://res.cloudinary.com/du7l2fe4u/image/upload/v1570582485/chort_txmj32.jpg',
   name: 'Powerful Tropical Chort'
 )
 
 @chort.save!
 
 @amanis = Cocktail.new(
-  remote_photo_url: 'https://images.unsplash.com/photo-1566284628402-3f0895b3eb28?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
+  remote_photo_url: 'https://res.cloudinary.com/du7l2fe4u/image/upload/v1570582484/amanis_dkhybk.jpg',
   name: 'Refreshing Chilled Amanis'
 )
 
